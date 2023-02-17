@@ -9,6 +9,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 yarn sb - run storybook
 Open [http://localhost:6000](http://localhost:6000) with your browser to see the result.
 
-yarn plop - generator code
+yarn plop - code generator
 ```
 
