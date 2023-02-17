@@ -22,6 +22,5 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "no-unused-expressions": "off",
-    indent: "error",
   },
 };
