@@ -1,7 +1,7 @@
 ## Getting Started
 
 ### Link to view page 
-[coin-samiragrossi.vercel.app]
+[`coin-samiragrossi.vercel.app`]
 
 ### Run the script
 
