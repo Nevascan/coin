@@ -13,6 +13,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@firebase/auth": "^0.21.3",
     "@hookform/resolvers": "^2.9.11",
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
@@ -20,9 +21,11 @@
     "@types/react-dom": "18.0.11",
     "eslint": "^8.34.0",
     "eslint-config-next": "13.1.6",
+    "firebase": "^9.17.2",
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-hook-form": "^7.43.1",
     "typescript": "^4.9.5",
     "yup": "^1.0.0"
