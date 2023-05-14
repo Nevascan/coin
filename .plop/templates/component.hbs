@@ -1,9 +1,15 @@
-import { FC } from 'react'
+import { FC } from "react";
+import { Styled{{ pascalCase name }} } from './{{ pascalCase name }}.styles'
 
-export const {{ pascalCase name }}: FC = () => {
-    return (
-        <div>
-
-        </div>
-    )
+type {{ pascalCase name }}Props = {
+  children: any;
+  color: string;
 }
+
+export const {{ pascalCase name }}: FC<{{ pascalCase name }}Props> = ({ children, color }) => {
+  return (
+    <Styled{{ pascalCase name }} fontColor={color}>
+      {children}
+    </Styled{{ pascalCase name }}>
+  );
+};

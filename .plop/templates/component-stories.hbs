@@ -1,15 +1,17 @@
-import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { {{ pascalCase name }} } from "../{{ pascalCase name }}";
 
-import { {{ pascalCase name }} } from '../{{ pascalCase name }}';
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-export default {
+const story{{ pascalCase name }}: Meta<typeof {{ pascalCase name }}> = {
   title: "Components/{{ pascalCase name }}",
   component: {{ pascalCase name }},
-} as ComponentMeta<typeof {{ pascalCase name }}>;
+};
 
-const Template: ComponentStory<typeof {{ pascalCase name }}> = (args) => <{{ pascalCase name }} {...args} />;
+export default story{{ pascalCase name }};
+type Story = StoryObj<typeof {{ pascalCase name }}>;
 
-export const Primary = Template.bind({
-    label: 'Test Label'
-});
+export const Typography: Story = {
+  args: {
+    color: "red",
+  },
+};
+
