@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   experimental: {
     forceSwcTransforms: true,
     appDir: true,
+  },
+  compiler: {
+    styledComponents: true,
   },
 };
 
