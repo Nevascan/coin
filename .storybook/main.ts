@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     "@storybook/addon-actions",
     "@storybook/addon-a11y",
     "@storybook/addon-mdx-gfm",
+    "@storybook/addon-styling",
   ],
   typescript: {
     check: false,
