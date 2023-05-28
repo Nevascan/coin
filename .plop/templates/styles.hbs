@@ -4,7 +4,7 @@ type StyleProps = {
   fontColor: string
 };
 
-export const Styled{{ pascalCase name }} = styled.h4<StyleProps>(({ theme, fontColor }) => ({
-  background: theme.palette.default.light,
+export const Styled{{ pascalCase name }} = styled.p<StyleProps>(({ theme, fontColor }) => ({
+  fontSize: theme.typography.headlineMedium,
   fontColor: fontColor,
 }));

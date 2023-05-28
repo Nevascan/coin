@@ -2,14 +2,14 @@ import { FC } from "react";
 import { Styled{{ pascalCase name }} } from './{{ pascalCase name }}.styles'
 
 type {{ pascalCase name }}Props = {
-  children: any;
+  text: string;
   color: string;
 }
 
-export const {{ pascalCase name }}: FC<{{ pascalCase name }}Props> = ({ children, color }) => {
+export const {{ pascalCase name }}: FC<{{ pascalCase name }}Props> = ({ text, color }) => {
   return (
     <Styled{{ pascalCase name }} fontColor={color}>
-      {children}
+      {text}
     </Styled{{ pascalCase name }}>
   );
 };
