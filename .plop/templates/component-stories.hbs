@@ -9,7 +9,7 @@ const story{{ pascalCase name }}: Meta<typeof {{ pascalCase name }}> = {
 export default story{{ pascalCase name }};
 type Story = StoryObj<typeof {{ pascalCase name }}>;
 
-export const Typography: Story = {
+export const Story{{ pascalCase name }}: Story = {
   args: {
     color: "red",
     text: 'Criando um parágrafo'

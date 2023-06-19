@@ -5,6 +5,6 @@ type StyleProps = {
 };
 
 export const Styled{{ pascalCase name }} = styled.p<StyleProps>(({ theme, fontColor }) => ({
-  fontSize: theme.typography.headlineMedium,
-  fontColor: fontColor,
+  fontSize: theme.typography.headlineMedium.size,
+  color: fontColor,
 }));
