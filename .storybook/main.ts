@@ -37,6 +37,7 @@ const config: StorybookConfig = {
       styles: path.resolve(__dirname, "../styles"),
       app: path.resolve(__dirname, "../app"),
       props: path.resolve(__dirname, "../props"),
+      routes: path.resolve(__dirname, "../routes"),
     };
     return config;
   },

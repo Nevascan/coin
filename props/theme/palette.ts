@@ -1,6 +1,7 @@
 export type PaletteProps = {
-  default: { light: string; dark: string };
-  primary: { light: string; dark: string };
-  success: { light: string; dark: string };
-  warning: { light: string; dark: string };
+  primary: { main: string; secondary: string };
+  success: { main: string };
+  warning: { main: string };
+  label: { main: string; secondary: string };
+  text: { main: string; secondary: string };
 };

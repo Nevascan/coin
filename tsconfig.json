@@ -25,7 +25,8 @@
       "lib/*": ["lib/*"],
       "app/*": ["app/*"],
       "styles/*": ["styles/*"],
-      "props/*": ["props/*"]
+      "props/*": ["props/*"],
+      "routes/*": ["routes/*"]
     },
     "strictNullChecks": true
   },
