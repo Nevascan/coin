@@ -1,25 +1,52 @@
 export const typography = {
-  displayLarge: "3.5625rem",
-  headlineLarge: "2.5rem",
-  bodyLarge: "1.5rem",
-  labelLarge: "1.25rem",
+  displayLarge: {
+    size: "3.5625rem",
+    weight: 400,
+  },
+  headlineLarge: {
+    size: "2.5rem",
+    weight: 400,
+  },
+  bodyLarge: {
+    size: "1.5rem",
+    weight: 400,
+  },
+  labelLarge: {
+    size: "0.9375rem",
+    weight: 600,
+  },
 
-  displayMedium: "2.8125rem",
-  headlineMedium: "2.25rem",
-  bodyMedium: "1.25rem",
-  labelMedium: "1rem",
+  displayMedium: {
+    size: "2.8125rem",
+    weight: 400,
+  },
+  headlineMedium: {
+    size: "2.25rem",
+    weight: 400,
+  },
+  bodyMedium: {
+    size: "1.25rem",
+    weight: 400,
+  },
+  labelMedium: {
+    size: "0.875rem",
+    weight: 600,
+  },
 
-  displaySmall: "2.25rem",
-  headlineSmall: "2rem",
-  bodySmall: "1rem",
-  labelSmall: "0.875rem",
+  displaySmall: {
+    size: "2.25rem",
+    weight: 400,
+  },
+  headlineSmall: {
+    size: "2rem",
+    weight: 400,
+  },
+  bodySmall: {
+    size: "1rem",
+    weight: 400,
+  },
+  labelSmall: {
+    size: "0.8125rem",
+    weight: 600,
+  },
 };
-
-// display - tipografia para exibicoes importantes e curtas, ex:
-// banners
-// headline - serve para ser um titulo importante e com letras
-// estravagantes.
-// body - paragrafos, letras legiveis, tamanhos pequenos que possam
-// ser lidos confortavelmente
-// label - para etiquetas, é uma letra pequena sem ser muito forte
-// serve para botoes.
