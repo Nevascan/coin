@@ -5,7 +5,7 @@ type StyleProps = { background: string };
 
 const StyledLayout = styled.div<StyleProps>(({ theme, background }) => ({
   width: "100%",
-  background: theme.palette[background].main,
+  background: theme.palette[background]?.main || background,
   color: theme.palette.text.main,
   boxSizing: "border-box",
   display: "flex",
