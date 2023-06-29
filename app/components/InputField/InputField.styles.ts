@@ -16,7 +16,7 @@ export const StyledInputField = styled.input<StyleProps>(
     borderRadius: theme.spacing([0.5]),
     border: "none",
     outline: `${theme.palette.label.secondary} solid 1px`,
-    fontSize: theme.typography.labelMedium.size,
+    fontSize: theme.typography.medium.label.size,
     color: theme.palette.label.main,
     padding: theme.spacing(type[typeofSize]),
     width: fullWidth ? "100%" : "",
