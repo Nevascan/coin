@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 type StyleProps = {
   typeofSize: string;
-  fullWidth: boolean;
+  fullWidth?: boolean;
 };
 
 const type = {

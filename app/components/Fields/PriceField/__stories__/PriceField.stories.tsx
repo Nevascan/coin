@@ -1,18 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { InputField } from "../InputField";
+import { PriceField } from "../PriceField";
 import { spacing } from "styles/defaultTheme";
 
-const storyInputField: Meta<typeof InputField> = {
-  title: "Components/Fields/InputField",
-  component: InputField,
+const storyPriceField: Meta<typeof PriceField> = {
+  title: "Components/Fields/PriceField",
+  component: PriceField,
   argTypes: {
     size: {
       options: ["small", "medium", "large"],
       control: { type: "inline-radio" },
-    },
-    type: {
-      options: ["email", "password", "text", "radio", "checkbox"],
-      control: { type: "select" },
     },
     fullWidth: {
       control: { type: "boolean" },
@@ -20,19 +16,18 @@ const storyInputField: Meta<typeof InputField> = {
   },
 };
 
-export default storyInputField;
-type Story = StoryObj<typeof InputField>;
+export default storyPriceField;
+type Story = StoryObj<typeof PriceField>;
 
-export const StoryInput: Story = {
+export const StoryPriceField: Story = {
   render: (args) => (
     <div style={{ margin: spacing([2, 1]) }}>
-      <InputField {...args} />
+      <PriceField {...args} />
     </div>
   ),
   args: {
-    name: "email",
+    name: "price",
     size: "medium",
-    type: "email",
     fullWidth: false,
     placeholder: "Digite aqui",
   },

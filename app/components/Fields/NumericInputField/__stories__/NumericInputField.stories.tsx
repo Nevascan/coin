@@ -3,7 +3,7 @@ import { NumericInputField } from "../NumericInputField";
 import { spacing } from "styles/defaultTheme";
 
 const storyNumericInputField: Meta<typeof NumericInputField> = {
-  title: "Components/NumericInputField",
+  title: "Components/Fields/NumericInputField",
   component: NumericInputField,
   argTypes: {
     size: {

@@ -1,30 +1,28 @@
 import { FC } from "react";
-import { PatternFormat } from "react-number-format";
+import { NumericFormat } from "react-number-format";
 import { InputFieldProps } from "../InputField";
 import { StyledInputField } from "../InputField/InputField.styles";
 
-const formatTypes = {
-  cellPhone: "(##) #####-####",
-  date: "##/##/####",
-};
-
-export const NumericInputField: FC<InputFieldProps> = ({
+export const PriceField: FC<InputFieldProps> = ({
+  name,
+  placeholder = "",
   fullWidth = false,
   size = "medium",
-  placeholder = "",
   onChange,
   value,
-  name,
 }) => {
   return (
-    <PatternFormat
+    <NumericFormat
       name={name}
       typeofSize={size}
-      placeholder={placeholder}
-      onChange={onChange}
-      fullWidth={fullWidth}
       value={value}
-      format={formatTypes[name]}
+      placeholder={placeholder}
+      fullWidth={fullWidth}
+      onChange={onChange}
+      prefix="R$"
+      thousandSeparator="."
+      decimalSeparator=","
+      decimalScale={2}
       customInput={StyledInputField}
     />
   );
