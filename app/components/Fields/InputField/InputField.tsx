@@ -4,7 +4,7 @@ import { StyledInputField } from "./InputField.styles";
 export type InputFieldProps = {
   size?: string;
   type?: string;
-  value?: string;
+  value?: string | number;
   name: string;
   onChange: () => any;
   placeholder: string;

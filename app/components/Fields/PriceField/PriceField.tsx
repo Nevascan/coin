@@ -22,6 +22,7 @@ export const PriceField: FC<InputFieldProps> = ({
       prefix="R$"
       thousandSeparator="."
       decimalSeparator=","
+      fixedDecimalScale
       decimalScale={2}
       customInput={StyledInputField}
     />
