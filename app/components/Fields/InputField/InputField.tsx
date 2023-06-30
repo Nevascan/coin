@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { StyledInputField } from "./InputField.styles";
 
-type InputFieldProps = {
+export type InputFieldProps = {
   size?: string;
   type?: string;
   value: string;
@@ -11,12 +11,10 @@ type InputFieldProps = {
   fullWidth?: boolean;
 };
 
-// ADICIONAR -> formatacao de campo
-
 export const InputField: FC<InputFieldProps> = ({
   size = "medium",
   type = "text",
-  placeholder = "Digite aqui",
+  placeholder = "",
   fullWidth = false,
   value,
   onChange,

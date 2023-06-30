@@ -11,7 +11,7 @@ const storyInputField: Meta<typeof InputField> = {
       control: { type: "inline-radio" },
     },
     type: {
-      options: ["email", "password", "text", "number", "date"],
+      options: ["email", "password", "text", "radio", "checkbox"],
       control: { type: "select" },
     },
     fullWidth: {
