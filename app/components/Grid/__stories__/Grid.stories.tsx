@@ -24,8 +24,10 @@ export const StoryGrid: Story = {
         spacing={[2]}
         {...args}
       >
-        {items.map((idx) => (
-          <GridItem style={{ border: "1px solid" }}>Item {idx}</GridItem>
+        {items?.map((idx) => (
+          <GridItem key={idx} style={{ border: "1px solid" }}>
+            Item {idx}
+          </GridItem>
         ))}
       </GridContainer>
     </div>

@@ -14,7 +14,7 @@ module.exports = {
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig.json", //
+    project: "./tsconfig.json",
     ecmaVersion: "latest",
     sourceType: "module",
   },
@@ -22,5 +22,6 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "no-unused-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off",
   },
 };
