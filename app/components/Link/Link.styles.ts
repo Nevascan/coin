@@ -11,8 +11,8 @@ export const StyledLink = styled.div<StyleProps>(
     "& a": {
       color: theme.palette.text[color],
       background: background,
-      fontSize: theme.typography[variant].size,
-      fontWeight: theme.typography[variant].weight,
+      fontSize: theme.typography[variant].label.size,
+      fontWeight: theme.typography[variant].label.weight,
       textDecoration: "none",
 
       "&:hover": {

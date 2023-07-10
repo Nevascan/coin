@@ -13,7 +13,7 @@ type LinkProps = {
 export const Link: FC<LinkProps> = ({
   children,
   color = "secondary",
-  variant = "labelLarge",
+  variant = "large",
   href = "",
   background = "",
 }) => {
