@@ -6,7 +6,7 @@ type {{ pascalCase name }}Props = {
   color: string;
 }
 
-export const {{ pascalCase name }}: FC<{{ pascalCase name }}Props> = ({ text, color }) => {
+export const {{ pascalCase name }}:FC <{{ pascalCase name }}Props> = ({ text, color }) => {
   return (
     <Styled{{ pascalCase name }} fontColor={color}>
       {text}

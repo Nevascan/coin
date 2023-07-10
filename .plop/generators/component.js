@@ -12,22 +12,22 @@ module.exports = function (plop) {
       {
         type: "add",
         path: "../app/components/{{ pascalCase name }}/{{ pascalCase name }}.tsx",
-        templateFile: "templates/component.hbs",
+        templateFile: "templates/components/component.hbs",
       },
       {
         type: "add",
         path: "../app/components/{{ pascalCase name }}/{{ pascalCase name }}.styles.ts",
-        templateFile: "templates/styles.hbs",
+        templateFile: "templates/components/styles.hbs",
       },
       {
         type: "add",
         path: "../app/components/{{ pascalCase name }}/__stories__/{{ pascalCase name }}.stories.tsx",
-        templateFile: "templates/component-stories.hbs",
+        templateFile: "templates/components/component-stories.hbs",
       },
       {
         type: "add",
         path: "../app/components/{{ pascalCase name }}/index.ts",
-        templateFile: "templates/index.hbs",
+        templateFile: "templates/components/index.hbs",
       },
     ],
   });
