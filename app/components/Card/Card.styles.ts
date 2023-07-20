@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 type StyleProps = {
-  padding: number;
-  margin: number;
-  mt: number;
-  mb: number;
-  mr: number;
-  ml: number;
+  padding: number | number[];
+  margin: number | number[];
+  mt: number | number[];
+  mb: number | number[];
+  mr: number | number[];
+  ml: number | number[];
 };
 
 export const StyledCard = styled.div<StyleProps>(

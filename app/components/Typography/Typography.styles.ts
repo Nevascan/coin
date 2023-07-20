@@ -5,7 +5,7 @@ type TypographyProps = {
   variant: string;
   color: string;
   align: string;
-  margin: number;
+  margin: number | number[];
   colorType: string;
 };
 

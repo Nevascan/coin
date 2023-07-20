@@ -8,11 +8,11 @@ type ButtonProps = {
   onClick: () => any;
   fullWidth?: boolean;
   width?: number | string;
-  margin?: number;
-  mb?: number;
-  mt?: number;
-  mr?: number;
-  ml?: number;
+  margin?: number | number[];
+  mb?: number | number[];
+  mt?: number | number[];
+  mr?: number | number[];
+  ml?: number | number[];
 };
 
 export const Button: FC<ButtonProps> = ({

@@ -6,7 +6,7 @@ type StyleProps = {
   color?: string;
   children: any;
   align?: string;
-  margin?: number;
+  margin?: number | number[];
   colorType?: string;
   style?: any;
 };

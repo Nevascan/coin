@@ -8,7 +8,7 @@ type LinkProps = {
   color?: string;
   href: string;
   variant?: string;
-  margin?: number;
+  margin?: number | number[];
   style?: any;
   align?: string;
 };

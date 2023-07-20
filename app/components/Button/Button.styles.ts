@@ -5,11 +5,11 @@ type StyleProps = {
   size: string;
   fullWidth: boolean;
   width: number | string;
-  margin: number;
-  mt: number;
-  mb: number;
-  mr: number;
-  ml: number;
+  margin: number | number[];
+  mt: number | number[];
+  mb: number | number[];
+  mr: number | number[];
+  ml: number | number[];
 };
 
 const type = {

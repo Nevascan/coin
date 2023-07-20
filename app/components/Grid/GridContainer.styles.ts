@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export type GridContainerProps = {
-  spacing?: number;
+  spacing?: number | number[];
   justifyContent?: string;
   justifyItems?: string;
   alignContent?: string;

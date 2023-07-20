@@ -3,7 +3,7 @@ import { StyledRadioGroup } from "./RadioGroup.styles";
 
 type RadioGroupProps = {
   onChange?: () => any;
-  margin?: number;
+  margin?: number | number[];
   value?: string;
   id: string;
   label: string;

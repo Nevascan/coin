@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type StyleProps = {
-  margin: number;
+  margin: number | number[];
   size: string;
 };
 

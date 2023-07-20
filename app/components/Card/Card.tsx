@@ -3,12 +3,12 @@ import { StyledCard } from "./Card.styles";
 
 type CardProps = {
   children: any;
-  padding?: number;
-  margin?: number;
-  mb?: number;
-  mt?: number;
-  mr?: number;
-  ml?: number;
+  padding?: number | number[];
+  margin?: number | number[];
+  mb?: number | number[];
+  mt?: number | number[];
+  mr?: number | number[];
+  ml?: number | number[];
 };
 export const Card: FC<CardProps> = ({
   children,

@@ -17,6 +17,7 @@ type Story = StoryObj<typeof RadioGroup>;
 
 export const StoryRadioGroup: Story = {
   render: (args) => (
+    // mudar o margin para spacing
     <div style={{ margin: 16, display: "flex", gap: 2 }}>
       <RadioGroup
         id="yes"
