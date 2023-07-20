@@ -2,22 +2,15 @@ import styled from "styled-components";
 
 type StyleProps = {
   color: string;
-  variant: string;
-  background: string;
 };
 
-export const StyledLink = styled.div<StyleProps>(
-  ({ theme, color, variant, background }) => ({
-    "& a": {
-      color: theme.palette.text[color],
-      background: background,
-      fontSize: theme.typography[variant].label.size,
-      fontWeight: theme.typography[variant].label.weight,
-      textDecoration: "none",
+export const StyledLink = styled.a<StyleProps>(({ theme, color }) => ({
+  "& a": {
+    color: theme.palette.text[color],
+    textDecoration: "none",
 
-      "&:hover": {
-        textDecoration: "underline",
-      },
+    "&:hover": {
+      textDecoration: "underline",
     },
-  })
-);
+  },
+}));
