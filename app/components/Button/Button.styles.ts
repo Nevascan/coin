@@ -2,9 +2,14 @@ import styled from "styled-components";
 
 type StyleProps = {
   variant: string;
-  typeofSize: string;
+  size: string;
   fullWidth: boolean;
-  color: string;
+  width: number | string;
+  margin: number;
+  mt: number;
+  mb: number;
+  mr: number;
+  ml: number;
 };
 
 const type = {
@@ -14,18 +19,32 @@ const type = {
 };
 
 export const StyledButton = styled.button<StyleProps>(
-  ({ theme, variant, typeofSize, fullWidth, color }) => ({
-    background: theme.palette[variant][color],
-    borderRadius: theme.spacing([0.5]),
-    border: `1px solid ${theme.palette[variant].main}`,
+  ({ theme, variant, size, fullWidth, width, margin, mt, mb, mr, ml }) => ({
+    background:
+      variant == "contained"
+        ? theme.palette.primary.main
+        : theme.palette.primary.light,
+    color:
+      variant == "contained"
+        ? theme.palette.text.secondary
+        : theme.palette.text.main,
+
+    border: `1px solid ${theme.palette.primary.main}`,
+    borderRadius: theme.spacing(0.5),
     fontSize: theme.typography.small.label.size,
     fontWeight: theme.typography.medium.label.weight,
-    color: theme.palette.text[color],
     letterSpacing: 0.7,
     textTransform: "uppercase",
-    padding: theme.spacing(type[typeofSize]),
+    padding: theme.spacing(...type[size]),
     cursor: "pointer",
     width: fullWidth ? "100%" : "",
+    maxWidth: !fullWidth ? width : "",
+    margin: theme.spacing(margin),
+    // Ajustar o spacing
+    marginTop: !margin ? theme.spacing(mt) : "",
+    marginBottom: !margin ? theme.spacing(mb) : "",
+    marginLeft: !margin ? theme.spacing(ml) : "",
+    marginRight: !margin ? theme.spacing(mr) : "",
 
     "&:hover": {
       opacity: 0.9,

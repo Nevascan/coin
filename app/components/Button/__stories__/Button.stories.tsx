@@ -7,15 +7,11 @@ const storyButton: Meta<typeof Button> = {
   component: Button,
   argTypes: {
     variant: {
-      options: ["main", "secondary"],
+      options: ["contained", "outlined"],
       control: { type: "select" },
     },
     size: {
       options: ["small", "medium", "large"],
-      control: { type: "inline-radio" },
-    },
-    typeofColor: {
-      options: ["main", "secondary"],
       control: { type: "inline-radio" },
     },
     fullWidth: {
@@ -28,15 +24,15 @@ type Story = StoryObj<typeof Button>;
 
 export const StoryButton: Story = {
   render: (args) => (
-    <div style={{ margin: spacing([2, 1]) }}>
+    <div style={{ margin: spacing(2, 1) }}>
       <Button {...args} />
     </div>
   ),
   args: {
-    name: "Button",
-    variant: "primary",
+    children: "Button",
+    variant: "contained",
     size: "small",
-    typeofColor: "main",
     fullWidth: false,
+    width: "100%",
   },
 };

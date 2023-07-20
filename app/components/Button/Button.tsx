@@ -2,31 +2,46 @@ import { FC } from "react";
 import { StyledButton } from "./Button.styles";
 
 type ButtonProps = {
-  name: string;
-  variant?: any;
+  children: string;
+  variant?: string;
   size?: string;
   onClick: () => any;
   fullWidth?: boolean;
-  typeofColor?: string;
+  width?: number | string;
+  margin?: number;
+  mb?: number;
+  mt?: number;
+  mr?: number;
+  ml?: number;
 };
 
 export const Button: FC<ButtonProps> = ({
-  variant = "primary",
-  typeofColor = "main",
+  variant = "contained",
   size = "medium",
   fullWidth = false,
-  name,
+  width = 0,
+  margin = 0,
+  mb = 0,
+  mt = 0,
+  mr = 0,
+  ml = 0,
+  children,
   onClick,
 }) => {
   return (
     <StyledButton
+      width={width}
       fullWidth={fullWidth}
-      typeofSize={size}
+      size={size}
       variant={variant}
-      color={typeofColor}
       onClick={onClick}
+      margin={margin}
+      mb={mb}
+      mt={mt}
+      mr={mr}
+      ml={ml}
     >
-      {name}
+      {children}
     </StyledButton>
   );
 };

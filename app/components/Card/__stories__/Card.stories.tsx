@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Box } from "app/components/Box";
+import { Typography } from "app/components/Typography";
 import { spacing } from "styles/defaultTheme";
 import { Card } from "../Card";
 
@@ -15,9 +16,15 @@ export const StoryCard: Story = {
     <Box>
       <Card {...args}>
         <div
-          style={{ padding: spacing([3]), height: 100, textAlign: "center" }}
+          style={{
+            padding: spacing(3),
+            height: 100,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <h1>Card</h1>
+          <Typography children="Card" />
         </div>
       </Card>
     </Box>
