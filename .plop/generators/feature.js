@@ -34,11 +34,6 @@ module.exports = function (plop) {
         path: "../pages/{{ kebabCase name }}.tsx",
         templateFile: "templates/features/pages.hbs",
       },
-      {
-        type: "add",
-        path: "../app/features/index.ts",
-        templateFile: "templates/features/index.hbs",
-      },
     ],
   });
 };
