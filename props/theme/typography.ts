@@ -6,7 +6,8 @@ type props = {
 type variants = {
   display: props;
   headline: props;
-  body: props;
+  body1: props;
+  body2: props;
   label: props;
 };
 
