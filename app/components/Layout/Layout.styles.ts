@@ -6,7 +6,6 @@ type StyleProps = { background: string };
 const StyledLayout = styled.div<StyleProps>(({ theme, background }) => ({
   width: "100%",
   background: theme.palette[background]?.main || background,
-  color: theme.palette.text.main,
   boxSizing: "border-box",
   display: "flex",
   justifyContent: "space-between",
@@ -14,18 +13,20 @@ const StyledLayout = styled.div<StyleProps>(({ theme, background }) => ({
 }));
 
 const StyledMedia = styled(StyledLayout)`
-  padding: ${spacing([0, 4])};
+  padding: ${spacing(0, 4)};
   @media ${breakpoints.md} {
-    padding: ${spacing([0, 8])};
+    padding: ${spacing(0, 8)};
   }
 `;
 export const StyledHeader = styled(StyledMedia)`
   height: 70px;
-  position: "sticky";
+  position: sticky;
   top: 0px;
-  zindex: 1;
+  z-index: 1;
 `;
 
 export const StyledFooter = styled(StyledMedia)`
   height: 100px;
+  position: relative;
+  bottom: 0;
 `;
