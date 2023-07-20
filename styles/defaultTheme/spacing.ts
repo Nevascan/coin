@@ -1,5 +1,3 @@
-export const spacing = (size) => {
-  const arr: any = [];
-  size.map((item) => arr.push(`${item * 8}px`));
-  if (arr.length <= 4) return arr.join(" ");
+export const spacing = (...values) => {
+  return values.map((item) => `${item * 8}px`).join(" ");
 };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export type GridContainerProps = {
-  spacing?: number[];
+  spacing?: number;
   justifyContent?: string;
   justifyItems?: string;
   alignContent?: string;
@@ -24,7 +24,7 @@ export const StyledGridContainer = styled.div<GridContainerProps>(
     placeItems,
   }) => ({
     display: "grid",
-    gap: theme.spacing(spacing || []),
+    gap: theme.spacing(spacing),
     gridTemplateColumns: "repeat(12, 1fr)",
     gridTemplateRows: "repeat(12, 1fr)",
 

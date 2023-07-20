@@ -21,7 +21,7 @@ export const StoryGrid: Story = {
     <div style={{ width: 1000 }}>
       <GridContainer
         style={{ border: "1px solid red", height: 200 }}
-        spacing={[2]}
+        spacing={2}
         {...args}
       >
         {items?.map((idx) => (

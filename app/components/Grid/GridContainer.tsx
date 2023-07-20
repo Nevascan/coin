@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { StyledGridContainer } from "./GridContainer.styles";
 import { GridContainerProps } from "./GridContainer.styles";
+
 export const GridContainer: FC<GridContainerProps> = ({
   spacing,
   justifyContent,

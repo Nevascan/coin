@@ -21,8 +21,8 @@ const type = {
 };
 
 export const StyledBox = styled(Styled)`
-  padding: ${({ typeofSize }) => spacing(type[typeofSize])};
+  padding: ${({ typeofSize }) => spacing(...type[typeofSize])};
   @media ${breakpoints.md} {
-    padding: ${({ typeofSize }) => spacing(type[typeofSize])};
+    padding: ${({ typeofSize }) => spacing(...type[typeofSize])};
   }
 `;
