@@ -40,7 +40,6 @@ export const StyledButton = styled.button<StyleProps>(
     width: fullWidth ? "100%" : "",
     maxWidth: !fullWidth ? width : "",
     margin: theme.spacing(margin),
-    // Ajustar o spacing
     marginTop: !margin ? theme.spacing(mt) : "",
     marginBottom: !margin ? theme.spacing(mb) : "",
     marginLeft: !margin ? theme.spacing(ml) : "",

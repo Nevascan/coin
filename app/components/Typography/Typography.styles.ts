@@ -1,20 +1,31 @@
 import styled from "styled-components";
 import { breakpoints } from "styles/defaultTheme";
 
-type TypographyProps = {
+type StyleProps = {
   variant: string;
   color: string;
-  align: string;
-  margin: number | number[];
+  align: any;
   colorType: string;
+  margin: number | number[];
+  mt: number | number[];
+  mb: number | number[];
+  mr: number | number[];
+  ml: number | number[];
 };
 
-export const StyledTypography = styled.p<TypographyProps>`
-  text-align: ${({ align }) => align};
-  margin: ${({ theme, margin }) =>
-    margin > 0 ? theme.spacing(margin) : "0px !important"};
-  color: ${({ theme, color, colorType }) => theme.palette[colorType][color]};
+export const Styled = styled.p<StyleProps>(
+  ({ theme, color, colorType, margin, mt, mb, mr, ml, align }) => ({
+    color: theme.palette[colorType][color],
+    margin: theme.spacing(margin),
+    marginTop: !margin ? theme.spacing(mt) : "",
+    marginBottom: !margin ? theme.spacing(mb) : "",
+    marginLeft: !margin ? theme.spacing(ml) : "",
+    marginRight: !margin ? theme.spacing(mr) : "",
+    textAlign: align,
+  })
+);
 
+export const StyledTypography = styled(Styled)`
   @media ${breakpoints.xs} {
     font-size: ${({ theme, variant }) => theme.typography.small[variant].size};
     font-weight: ${({ theme, variant }) =>
