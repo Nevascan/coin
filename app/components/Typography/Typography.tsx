@@ -9,17 +9,17 @@ type TypographyProps = {
   margin?: number | number[];
   colorType?: string;
   style?: any;
-  mt?: number | number[];
-  mb?: number | number[];
-  mr?: number | number[];
-  ml?: number | number[];
+  mt?: number;
+  mb?: number;
+  mr?: number;
+  ml?: number;
 };
 export const Typography: FC<TypographyProps> = ({
   colorType = "text",
   color = "main",
   variant = "headline",
   align = "initial",
-  margin = 0,
+  margin = [],
   mb = 0,
   mt = 0,
   mr = 0,

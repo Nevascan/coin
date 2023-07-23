@@ -20,14 +20,16 @@ export const Layout: FC<LayoutProps> = ({
         <Typography color="secondary" variant="body1">
           Anycorn
         </Typography>
-        <Link href={Routes.login}>Sign in</Link>
+        <Link colorType="text" color="secondary" href={Routes.login}>
+          Sign in
+        </Link>
       </StyledHeader>
       <Box>{children}</Box>
       <StyledFooter background={background}>
         <Typography color="secondary" variant="body1">
           &copy; Copyright 2023 - Anycorn
         </Typography>
-        <Link href="https://www.linkedin.com/in/samira-grossi/">
+        <Link colorType="text" color="secondary" href={Routes.linkedin}>
           Acesse meu likedin
         </Link>
       </StyledFooter>

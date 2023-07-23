@@ -7,10 +7,10 @@ type StyleProps = {
   align: any;
   colorType: string;
   margin: number | number[];
-  mt: number | number[];
-  mb: number | number[];
-  mr: number | number[];
-  ml: number | number[];
+  mt: number;
+  mb: number;
+  mr: number;
+  ml: number;
 };
 
 export const Styled = styled.p<StyleProps>(
@@ -22,6 +22,14 @@ export const Styled = styled.p<StyleProps>(
     marginLeft: !margin ? theme.spacing(ml) : "",
     marginRight: !margin ? theme.spacing(mr) : "",
     textAlign: align,
+
+    "& a": {
+      color: theme.palette[colorType][color],
+      textDecoration: "none",
+      "&:hover": {
+        textDecoration: "underline",
+      },
+    },
   })
 );
 
