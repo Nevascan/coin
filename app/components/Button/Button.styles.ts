@@ -6,10 +6,10 @@ type StyleProps = {
   fullWidth: boolean;
   width: number | string;
   margin: number | number[];
-  mt: number | number[];
-  mb: number | number[];
-  mr: number | number[];
-  ml: number | number[];
+  mt: number;
+  mb: number;
+  mr: number;
+  ml: number;
 };
 
 const type = {
@@ -35,7 +35,7 @@ export const StyledButton = styled.button<StyleProps>(
     fontWeight: theme.typography.medium.label.weight,
     letterSpacing: 0.7,
     textTransform: "uppercase",
-    padding: theme.spacing(...type[size]),
+    padding: theme.spacing(type[size]),
     cursor: "pointer",
     width: fullWidth ? "100%" : "",
     maxWidth: !fullWidth ? width : "",

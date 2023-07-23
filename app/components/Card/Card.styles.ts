@@ -3,10 +3,10 @@ import styled from "styled-components";
 type StyleProps = {
   padding: number | number[];
   margin: number | number[];
-  mt: number | number[];
-  mb: number | number[];
-  mr: number | number[];
-  ml: number | number[];
+  mt: number;
+  mb: number;
+  mr: number;
+  ml: number;
 };
 
 export const StyledCard = styled.div<StyleProps>(

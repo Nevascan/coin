@@ -20,8 +20,8 @@ export const StyledRadioGroup = styled.div<StyleProps>(
     // aumentar o padding e tirar o px
     "& input": {
       margin: theme.spacing(margin),
-      height: theme.spacing(...type[size]),
-      width: theme.spacing(...type[size]),
+      height: theme.spacing(type[size]),
+      width: theme.spacing(type[size]),
       padding: "100px",
       cursor: "pointer",
       accentColor: theme.palette.primary.main,

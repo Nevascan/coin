@@ -19,7 +19,7 @@ export const StyledSelectField = styled.select<StyleProps>(
     outline: `${theme.palette.label.secondary} solid 1px`,
     fontSize: theme.typography.medium.label.size,
     color: theme.palette.label.main,
-    padding: theme.spacing(...type[typeofSize]),
+    padding: theme.spacing(type[typeofSize]),
     width: fullWidth ? "100%" : "",
     boxSizing: "border-box",
     margin: margin ? theme.spacing(1.5, 0) : "",

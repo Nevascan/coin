@@ -9,10 +9,10 @@ type ButtonProps = {
   fullWidth?: boolean;
   width?: number | string;
   margin?: number | number[];
-  mb?: number | number[];
-  mt?: number | number[];
-  mr?: number | number[];
-  ml?: number | number[];
+  mb?: number;
+  mt?: number;
+  mr?: number;
+  ml?: number;
 };
 
 export const Button: FC<ButtonProps> = ({
@@ -20,7 +20,7 @@ export const Button: FC<ButtonProps> = ({
   size = "medium",
   fullWidth = false,
   width = 0,
-  margin = 0,
+  margin = [],
   mb = 0,
   mt = 0,
   mr = 0,
