@@ -13,7 +13,7 @@ export const typography = {
       weight: 600,
     },
     body2: {
-      size: "1.5rem",
+      size: "1rem",
       weight: 400,
     },
     label: {
@@ -36,7 +36,7 @@ export const typography = {
       weight: 600,
     },
     body2: {
-      size: "1.25rem",
+      size: "0.938rem",
       weight: 400,
     },
     label: {
@@ -59,7 +59,7 @@ export const typography = {
       weight: 600,
     },
     body2: {
-      size: "1rem",
+      size: "0.875rem",
       weight: 500,
     },
     label: {
