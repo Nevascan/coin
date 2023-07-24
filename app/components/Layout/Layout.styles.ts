@@ -27,6 +27,6 @@ export const StyledHeader = styled(StyledMedia)`
 
 export const StyledFooter = styled(StyledMedia)`
   height: 100px;
-  position: relative;
-  bottom: 0;
+  position: fixed;
+  bottom: 0px;
 `;
