@@ -6,35 +6,45 @@ type LinkProps = {
   children: any;
   href: string;
   variant?: string;
-  margin?: number | number[];
   style?: any;
   align?: string;
   color?: string;
   colorType?: string;
+  margin?: number | number[];
+  mt?: number;
+  mb?: number;
+  mr?: number;
+  ml?: number;
 };
 
 export const Link: FC<LinkProps> = ({
-  children,
-  variant = "body1",
+  variant = "body2",
   align = "initial",
   margin = 0,
+  mb = 0,
+  mt = 0,
+  mr = 0,
+  ml = 0,
   href = "",
-  style,
-  color = "main",
   colorType = "label",
+  color = "main",
+  style,
+  children,
 }) => {
   return (
-    <>
-      <Typography
-        color={color}
-        colorType={colorType}
-        style={style}
-        align={align}
-        variant={variant}
-        margin={margin}
-      >
-        <NextLink href={href}>{children}</NextLink>
-      </Typography>
-    </>
+    <Typography
+      color={color}
+      colorType={colorType}
+      style={style}
+      align={align}
+      variant={variant}
+      margin={margin}
+      mb={mb}
+      mt={mt}
+      mr={mr}
+      ml={ml}
+    >
+      <NextLink href={href}>{children}</NextLink>
+    </Typography>
   );
 };

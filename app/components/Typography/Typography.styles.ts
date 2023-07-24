@@ -15,7 +15,7 @@ type StyleProps = {
 
 export const Styled = styled.p<StyleProps>(
   ({ theme, color, colorType, margin, mt, mb, mr, ml, align }) => ({
-    color: theme.palette[colorType][color],
+    color: color ? theme.palette[colorType][color] : theme.palette[colorType],
     margin: theme.spacing(margin),
     marginTop: !margin ? theme.spacing(mt) : "",
     marginBottom: !margin ? theme.spacing(mb) : "",

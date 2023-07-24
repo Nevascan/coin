@@ -11,13 +11,13 @@ type CardProps = {
   ml?: number;
 };
 export const Card: FC<CardProps> = ({
-  children,
   padding = 0,
-  margin = [],
+  margin = 0,
   mb = 0,
   mt = 0,
   mr = 0,
   ml = 0,
+  children,
 }) => {
   return (
     <StyledCard
