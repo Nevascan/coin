@@ -17,12 +17,11 @@ type Story = StoryObj<typeof Box>;
 
 export const StoryBox: Story = {
   render: (args) => (
-    <Box {...args}>
+    <Box style={{ background: "#A0EB85" }} {...args}>
       <div style={{ background: "white", height: 180 }}></div>
     </Box>
   ),
   args: {
-    background: "#A0EB85",
     device: "medium",
   },
 };
