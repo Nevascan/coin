@@ -9,8 +9,28 @@ import {
 import { FC } from "react";
 import { Routes } from "routes";
 import { StyledLogin } from "./LoginForm.styles";
+import { ValidationSchema } from "./LoginForm.schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, SubmitHandler } from "react-hook-form";
+import * as z from "zod";
+
+type LoginFormProps = z.infer<typeof ValidationSchema>;
 
 export const LoginForm: FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormProps>({
+    resolver: zodResolver(ValidationSchema),
+    defaultValues: { email: "", password: "" },
+  });
+
+  const onSubmit: SubmitHandler<LoginFormProps> = (data) => {
+    console.log("data", data);
+  };
+  console.log("errors", errors);
+
   return (
     <Box>
       <StyledLogin>
@@ -18,29 +38,36 @@ export const LoginForm: FC = () => {
           <Typography color="" mb={1} align="center">
             Login
           </Typography>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {/* mudar a margin do input para uma flexivel */}
             <InputField
-              name="email"
               type="email"
-              onChange={() => {}}
               placeholder="Email"
               fullWidth
               margin
+              {...register("email")}
             />
+            <Typography variant="body2" align="right" colorType="error">
+              {errors.email?.message}
+            </Typography>
             <InputField
-              name="password"
               type="password"
-              onChange={() => {}}
               placeholder="Senha"
               fullWidth
+              margin
+              {...register("password")}
             />
-            <Link mt={0.5} href={Routes.recoverPassword}>
-              Esqueceu senha?
-            </Link>
+            {/* classes em styled components */}
+            <div className="typographys">
+              <Link href={Routes.recoverPassword}>Esqueceu senha?</Link>
+              <Typography variant="body2" colorType="error">
+                {errors.password?.message}
+              </Typography>
+            </div>
+            <Button type="submit" margin={[2, 0]} fullWidth>
+              Entrar
+            </Button>
           </form>
-          <Button margin={[2, 0]} onClick={() => {}} fullWidth>
-            Entrar
-          </Button>
           <Link align="center" href={Routes.register}>
             Não possui uma conta?
           </Link>
