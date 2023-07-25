@@ -2,18 +2,18 @@ import { FC } from "react";
 import { StyledInputField } from "./InputField.styles";
 
 export type InputFieldProps = {
-  size?: string;
-  type?: string;
+  size?: "small" | "medium" | "large";
+  type?: "text" | "email" | "password" | "date";
   value?: string | number;
   name?: string;
-  onChange: () => any;
+  onChange?: any; // definir melhor o tipo
   placeholder: string;
   fullWidth?: boolean;
   margin?: boolean;
 };
 
 export const InputField: FC<InputFieldProps> = ({
-  size = "medium",
+  size = "large",
   type = "text",
   placeholder = "",
   fullWidth = false,

@@ -9,4 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     font-family: NotoSans, sans-serif;   
   }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+  }
 `;

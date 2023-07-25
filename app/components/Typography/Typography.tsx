@@ -16,10 +16,10 @@ type TypographyProps = {
 };
 export const Typography: FC<TypographyProps> = ({
   colorType = "text",
-  color = "main",
+  color = "", // ajustar o resto das tipografias
   variant = "headline",
   align = "initial",
-  margin = [],
+  margin = 0,
   mb = 0,
   mt = 0,
   mr = 0,

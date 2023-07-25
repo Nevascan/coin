@@ -1,28 +1,18 @@
 import styled from "styled-components";
 import { breakpoints, spacing } from "styles/defaultTheme";
 
-type StyleProps = {
-  background: string;
-  typeofSize: string;
-};
-
-const Styled = styled.div<StyleProps>(({ background }) => ({
+const Styled = styled.div(({}) => ({
   position: "relative",
   boxSizing: "border-box",
   maxWidth: 1440,
   width: "100%",
   margin: "auto",
-  background: background,
+  height: "100%",
 }));
 
-const type = {
-  small: [8, 4],
-  medium: [10, 8],
-};
-
 export const StyledBox = styled(Styled)`
-  padding: ${({ typeofSize }) => spacing(type[typeofSize])};
+  padding: ${spacing(8, 4)};
   @media ${breakpoints.md} {
-    padding: ${({ typeofSize }) => spacing(type[typeofSize])};
+    padding: ${spacing(10, 8)};
   }
 `;
