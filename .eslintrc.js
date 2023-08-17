@@ -23,5 +23,6 @@ module.exports = {
   rules: {
     "no-unused-expressions": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "no-useless-escape": "off",
   },
 };
