@@ -24,7 +24,7 @@ export const StoryCard: Story = {
             alignItems: "center",
           }}
         >
-          <Typography children="Card" />
+          <Typography>Card</Typography>
         </div>
       </Card>
     </Box>

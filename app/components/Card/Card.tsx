@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { StyledCard } from "./Card.styles";
 
 type CardProps = {
-  children: any;
+  children: ReactNode;
   padding?: number | number[];
   margin?: number | number[];
   mb?: number;

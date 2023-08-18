@@ -1,18 +1,19 @@
-import { FC } from "react";
+import { FC, ReactNode, CSSProperties } from "react";
 import { StyledTypography } from "./Typography.styles";
 
-type TypographyProps = {
-  variant?: string;
-  color?: string;
-  children: any;
-  align?: string;
+export type TypographyProps = {
+  variant?: "display" | "headline" | "body1" | "body2" | "label" | "";
+  color?: "main" | "secondary" | "light" | "";
+  align?: "left" | "center" | "right" | "initial";
+  colorType?: "primary" | "secondary" | "success" | "error" | "label" | "text";
+  children: ReactNode;
   margin?: number | number[];
-  colorType?: string;
-  style?: any;
+  style?: CSSProperties;
   mt?: number;
   mb?: number;
   mr?: number;
   ml?: number;
+  href?: string;
 };
 export const Typography: FC<TypographyProps> = ({
   colorType = "text",

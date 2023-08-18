@@ -1,21 +1,8 @@
 import { FC } from "react";
 import NextLink from "next/link";
-import { Typography } from "../Typography";
+import { Typography, TypographyProps } from "../Typography";
 
-type LinkProps = {
-  children: any;
-  href: string;
-  variant?: string;
-  style?: any;
-  align?: string;
-  color?: string;
-  colorType?: string;
-  margin?: number | number[];
-  mt?: number;
-  mb?: number;
-  mr?: number;
-  ml?: number;
-};
+type LinkProps = TypographyProps;
 
 export const Link: FC<LinkProps> = ({
   variant = "body2",
@@ -25,11 +12,11 @@ export const Link: FC<LinkProps> = ({
   mt = 0,
   mr = 0,
   ml = 0,
-  href = "",
   colorType = "label",
   color = "main",
   style,
   children,
+  href = "",
 }) => {
   return (
     <Typography

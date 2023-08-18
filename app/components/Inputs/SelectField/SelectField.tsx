@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC, ChangeEventHandler } from "react";
 import { StyledSelectField } from "./SelectField.styles";
 
 type SelectFieldProps = {
   size?: string;
   values: any;
   name: string;
-  onChange: () => any;
+  onChange?: ChangeEventHandler<HTMLSelectElement>;
   fullWidth?: boolean;
   margin?: boolean;
 };

@@ -1,8 +1,9 @@
-import { FC } from "react";
+import { Typography } from "app/components/Typography";
+import { FC, ChangeEventHandler } from "react";
 import { StyledRadioGroup } from "./RadioGroup.styles";
 
 type RadioGroupProps = {
-  onChange?: () => any;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   margin?: number | number[];
   value?: string;
   id: string;
@@ -23,19 +24,21 @@ export const RadioGroup: FC<RadioGroupProps> = ({
   name,
 }) => {
   return (
-    // Ajustar o size
-    <StyledRadioGroup size={size} margin={margin}>
-      <input
+    <>
+      {/* Ajustar o size */}
+      <StyledRadioGroup
         type="radio"
         id={id}
         name={name}
         onChange={onChange}
         value={value}
         checked={checked}
-        // ajustar o padding
-        style={{ padding: 20 }}
+        typeofsize={size}
+        margin={margin}
       />
-      <label htmlFor={id}>{label}</label>
-    </StyledRadioGroup>
+      <Typography variant="body2" id={id}>
+        {label}
+      </Typography>
+    </>
   );
 };

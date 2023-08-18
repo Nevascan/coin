@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC, MouseEventHandler, ReactNode } from "react";
 import { StyledButton } from "./Button.styles";
 
 type ButtonProps = {
-  children: string;
+  children: ReactNode;
   variant?: "contained" | "outline";
   size?: "small" | "medium" | "large";
-  onClick?: any; // definir melhor o tipo
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   fullWidth?: boolean;
   width?: number | string;
   margin?: number | number[];

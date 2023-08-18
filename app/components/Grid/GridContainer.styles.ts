@@ -1,3 +1,4 @@
+import { ReactNode, CSSProperties } from "react";
 import styled from "styled-components";
 
 export type GridContainerProps = {
@@ -8,8 +9,8 @@ export type GridContainerProps = {
   alignItems?: string;
   placeContent?: string;
   placeItems?: string;
-  children: any;
-  style?: any;
+  children: ReactNode;
+  style?: CSSProperties;
 };
 
 export const StyledGridContainer = styled.div<GridContainerProps>(

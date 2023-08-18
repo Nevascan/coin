@@ -35,18 +35,19 @@ export const Styled = styled.p<StyleProps>(
 
 export const StyledTypography = styled(Styled)`
   @media ${breakpoints.xs} {
-    font-size: ${({ theme, variant }) => theme.typography.small[variant].size};
+    font-size: ${({ theme, variant }) => theme.typography.small[variant]?.size};
     font-weight: ${({ theme, variant }) =>
-      theme.typography.small[variant].weight};
+      theme.typography.small[variant]?.weight};
   }
   @media ${breakpoints.md} {
-    font-size: ${({ theme, variant }) => theme.typography.medium[variant].size};
+    font-size: ${({ theme, variant }) =>
+      theme.typography.medium[variant]?.size};
     font-weight: ${({ theme, variant }) =>
-      theme.typography.medium[variant].weight};
+      theme.typography.medium[variant]?.weight};
   }
   @media ${breakpoints.lg} {
-    font-size: ${({ theme, variant }) => theme.typography.large[variant].size};
+    font-size: ${({ theme, variant }) => theme.typography.large[variant]?.size};
     font-weight: ${({ theme, variant }) =>
-      theme.typography.large[variant].weight};
+      theme.typography.large[variant]?.weight};
   }
 `;
