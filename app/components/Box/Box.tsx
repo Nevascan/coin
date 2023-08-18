@@ -8,22 +8,6 @@ type BoxProps = {
   style?: CSSProperties;
 };
 
-const size = {
-  small: [8, 4],
-  medium: [10, 8],
-};
-
-const width = {
-  small: 600,
-  medium: 1000,
-};
-
-export const Box: FC<BoxProps> = ({ device = "", style, children }) => {
-  return (
-    <StyledBox
-      style={{ width: width[device], padding: spacing(size[device]), ...style }}
-    >
-      {children}
-    </StyledBox>
-  );
+export const Box: FC<BoxProps> = ({ style, children }) => {
+  return <StyledBox style={style}>{children}</StyledBox>;
 };
