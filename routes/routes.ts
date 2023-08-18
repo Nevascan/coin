@@ -1,7 +1,7 @@
 export const Routes = {
   linkedin: "https://www.linkedin.com/in/samira-grossi/",
   home: "/",
-  register: "/registro",
-  login: "/login",
-  recoverPassword: "/recuperacao-de-senha",
+  register: "auth/registro",
+  login: "auth/login",
+  recoverPassword: "auth/recuperacao-de-senha",
 };
