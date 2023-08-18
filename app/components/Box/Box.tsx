@@ -1,6 +1,5 @@
 import { FC, ReactNode, CSSProperties } from "react";
 import { StyledBox } from "./Box.styles";
-import { spacing } from "styles/defaultTheme";
 
 type BoxProps = {
   children: ReactNode;
