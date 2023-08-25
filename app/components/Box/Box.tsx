@@ -3,7 +3,6 @@ import { StyledBox } from "./Box.styles";
 
 type BoxProps = {
   children: ReactNode;
-  device?: string;
   style?: CSSProperties;
 };
 
