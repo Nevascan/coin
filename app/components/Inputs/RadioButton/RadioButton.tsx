@@ -1,8 +1,8 @@
 import { Typography } from "app/components/Typography";
 import { FC, ChangeEventHandler } from "react";
-import { StyledRadioGroup } from "./RadioGroup.styles";
+import { StyledRadioButton, StyledRadioContainer } from "./RadioButton.styles";
 
-type RadioGroupProps = {
+type RadioButtonProps = {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   margin?: number | number[];
   value?: string;
@@ -10,13 +10,13 @@ type RadioGroupProps = {
   label: string;
   checked?: boolean;
   name: string;
-  size?: string;
+  size?: "small" | "medium";
 };
 
-export const RadioGroup: FC<RadioGroupProps> = ({
-  margin = 0,
-  value = "",
+export const RadioButton: FC<RadioButtonProps> = ({
   size = "medium",
+  margin,
+  value,
   checked,
   label,
   id,
@@ -24,21 +24,26 @@ export const RadioGroup: FC<RadioGroupProps> = ({
   name,
 }) => {
   return (
-    <>
-      {/* Ajustar o size */}
-      <StyledRadioGroup
+    <StyledRadioContainer>
+      <StyledRadioButton
         type="radio"
         id={id}
         name={name}
         onChange={onChange}
         value={value}
         checked={checked}
-        typeofsize={size}
+        sizeType={size}
         margin={margin}
       />
-      <Typography variant="body2" id={id}>
+      <Typography
+        variant="body2"
+        style={{
+          alignSelf: "self-end",
+          fontSize: size === "medium" ? "15px" : "",
+        }}
+      >
         {label}
       </Typography>
-    </>
+    </StyledRadioContainer>
   );
 };
