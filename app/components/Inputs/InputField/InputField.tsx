@@ -1,29 +1,15 @@
-import { FC, ChangeEventHandler } from "react";
+import { FC } from "react";
+
 import { StyledInputField } from "./InputField.styles";
-import { Typography } from "app/components";
+import { InputProps } from "props/inputs";
 
-export type InputFieldProps = {
-  size?: "small" | "medium" | "large";
-  type?: "text" | "email" | "password" | "date" | "number";
-  value?: string | number;
-  name?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
-  placeholder: string;
-  fullWidth?: boolean;
-  margin?: boolean;
-  message?: string;
-  register?: any;
-  thousandSeparator?: string;
-  decimalSeparator?: string;
-  prefix?: string;
-};
+// Refatorar o codigo --
+// Separar as props numa pasta --
+// Separar o input normal do formulario
+// Ver se consegue reaproveitar com ...props, ao inves de chamar todas
 
-const formatTypes = {
-  cellPhone: "(99) 99999-9999",
-  date: "99/99/9999",
-};
-
-export const InputField: FC<InputFieldProps> = ({
+export const InputField: FC<InputProps> = ({
+  name = "",
   size = "large",
   type = "text",
   fullWidth = false,
@@ -31,35 +17,17 @@ export const InputField: FC<InputFieldProps> = ({
   placeholder,
   value,
   onChange,
-  name,
-  message,
-  register,
-  thousandSeparator,
-  decimalSeparator,
-  prefix,
 }) => {
   return (
-    <>
-      {/* Arrumar o radio e checkbox */}
-      <StyledInputField
-        margin={message ? (!margin).toString() : margin.toString()}
-        fullwidth={fullWidth.toString()}
-        name={name}
-        type={type}
-        typeofsize={size}
-        placeholder={placeholder}
-        onChange={onChange}
-        value={value}
-        mask={formatTypes[name || register.name]}
-        maskPlaceholder={null}
-        thousandSeparator={thousandSeparator}
-        decimalSeparator={decimalSeparator}
-        prefix={prefix}
-        {...register}
-      />
-      <Typography variant="" colorType="error" align="right">
-        {message}
-      </Typography>
-    </>
+    <StyledInputField
+      margin={margin}
+      fullWidth={fullWidth}
+      name={name}
+      type={type}
+      sizeType={size}
+      placeholder={placeholder}
+      onChange={onChange}
+      value={value}
+    />
   );
 };

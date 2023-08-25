@@ -31,7 +31,7 @@ export const StoryInput: Story = {
   ),
   args: {
     name: "email",
-    size: "medium",
+    size: "large",
     type: "email",
     fullWidth: false,
     placeholder: "Digite aqui",

@@ -35,7 +35,7 @@ export const StorySelectField: Story = {
   ),
   args: {
     name: "select",
-    size: "medium",
+    size: "large",
     fullWidth: false,
     values: example,
   },

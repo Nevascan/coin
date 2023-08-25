@@ -1,9 +1,8 @@
-import styled, { StyledComponent } from "styled-components";
-import ReactInputMask from "react-input-mask";
+import styled from "styled-components";
 
 type StyleProps = {
-  typeofsize: string;
-  fullwidth: boolean;
+  sizeType: string;
+  fullWidth: boolean;
   margin: boolean;
 };
 
@@ -13,19 +12,15 @@ const type = {
   large: [1.5, 2],
 };
 
-export const StyledInputField: StyledComponent<
-  typeof ReactInputMask,
-  any,
-  StyleProps
-> = styled(ReactInputMask)<StyleProps>(
-  ({ theme, typeofsize, fullwidth, margin }) => ({
+export const StyledInputField = styled.input<StyleProps>(
+  ({ theme, sizeType, fullWidth, margin }) => ({
     borderRadius: theme.spacing(0.5),
     border: "none",
     outline: `${theme.palette.label.secondary} solid 1px`,
     fontSize: theme.typography.medium.label.size,
     color: theme.palette.label.main,
-    padding: theme.spacing(type[typeofsize]),
-    width: fullwidth ? "100%" : "",
+    padding: theme.spacing(type[sizeType]),
+    width: fullWidth ? "100%" : "",
     boxSizing: "border-box",
     margin: margin ? theme.spacing(1.5, 0) : theme.spacing(1.5, 0, 0.5, 0),
 
