@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { PriceField } from "../PriceField";
+import { MaskField } from "../MaskField";
 import { spacing } from "styles/defaultTheme";
 
-const storyPriceField: Meta<typeof PriceField> = {
-  title: "Components/Inputs/PriceField",
-  component: PriceField,
+const storyMaskField: Meta<typeof MaskField> = {
+  title: "Components/Inputs/MaskField",
+  component: MaskField,
   argTypes: {
     size: {
       options: ["small", "medium", "large"],
@@ -13,20 +13,24 @@ const storyPriceField: Meta<typeof PriceField> = {
     fullWidth: {
       control: { type: "boolean" },
     },
+    name: {
+      options: ["cellPhone", "date"],
+      control: { type: "inline-radio" },
+    },
   },
 };
 
-export default storyPriceField;
-type Story = StoryObj<typeof PriceField>;
+export default storyMaskField;
+type Story = StoryObj<typeof MaskField>;
 
-export const StoryPriceField: Story = {
+export const StoryMaskField: Story = {
   render: (args) => (
     <div style={{ margin: spacing(2, 1) }}>
-      <PriceField {...args} />
+      <MaskField {...args} />
     </div>
   ),
   args: {
-    name: "price",
+    name: "cellPhone",
     size: "large",
     fullWidth: false,
     placeholder: "Digite aqui",
