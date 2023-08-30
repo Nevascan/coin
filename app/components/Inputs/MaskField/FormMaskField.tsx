@@ -21,7 +21,7 @@ export const FormMaskField: FC<FormMaskFieldProps> = ({
       <Controller
         control={control}
         name={name}
-        render={({ field: { onChange, value } }) => (
+        render={({ field: { onChange, value, name } }) => (
           <MaskField
             margin={message ? !margin : margin}
             onChange={onChange}
@@ -29,6 +29,7 @@ export const FormMaskField: FC<FormMaskFieldProps> = ({
             placeholder={placeholder}
             size={size}
             fullWidth={fullWidth}
+            name={name}
           />
         )}
       />
