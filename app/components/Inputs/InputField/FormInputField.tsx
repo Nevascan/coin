@@ -1,7 +1,6 @@
 import { FC } from "react";
 
-import { StyledInputField } from "./InputField.styles";
-import { Typography } from "app/components";
+import { InputField, Typography } from "app/components";
 import { Controller } from "react-hook-form";
 import { FormInputProps } from "props/inputs";
 
@@ -20,15 +19,16 @@ export const FormInputField: FC<FormInputProps> = ({
       <Controller
         control={control}
         name={name}
-        render={({ field: { onChange, value } }) => (
-          <StyledInputField
+        render={({ field: { onChange, value, name } }) => (
+          <InputField
             margin={message ? !margin : margin}
             fullWidth={fullWidth}
             type={type}
-            sizeType={size}
+            size={size}
             placeholder={placeholder}
             onChange={onChange}
             value={value}
+            name={name}
           />
         )}
       />

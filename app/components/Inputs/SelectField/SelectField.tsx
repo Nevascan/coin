@@ -12,22 +12,27 @@ export const SelectField: FC<SelectProps> = ({
   onChange,
   name,
   defaultValue,
+  value,
+  placeholder,
 }) => {
-  const [value, setValue] = useState("");
+  const [valueChanged, setValueChanged] = useState("");
 
   const handleChange = (e) => {
-    setValue(e.target.value);
-    return onChange;
+    const { value } = e.target;
+    setValueChanged(value);
+    return onChange && onChange(value);
   };
 
   return (
     <StyledSelectField
-      sizeType={size} // trocar o nome
+      sizeType={size}
       fullWidth={fullWidth}
       name={name}
       onChange={handleChange}
       margin={margin}
-      style={{ color: !value ? "#767676" : palette.label.main }}
+      style={{ color: !valueChanged ? "#767676" : palette.label.main }}
+      value={value}
+      placeholder={placeholder}
     >
       <option value="" hidden>
         {defaultValue}

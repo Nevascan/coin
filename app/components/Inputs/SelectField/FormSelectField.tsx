@@ -2,9 +2,8 @@ import { FC } from "react";
 
 import { Typography } from "app/components/Typography";
 import { Controller } from "react-hook-form";
-import { StyledSelectField } from "./SelectField.styles";
 import { FormSelectProps } from "props/inputs";
-import { palette } from "styles/defaultTheme";
+import { SelectField } from "./SelectField";
 
 export const FormSelectField: FC<FormSelectProps> = ({
   size = "large",
@@ -15,30 +14,25 @@ export const FormSelectField: FC<FormSelectProps> = ({
   control,
   message,
   defaultValue,
+  placeholder,
 }) => {
   return (
     <>
       <Controller
         control={control}
         name={name}
-        render={({ field: { onChange, value } }) => (
-          <StyledSelectField
-            sizeType={size}
+        render={({ field: { onChange, value, name } }) => (
+          <SelectField
+            placeholder={placeholder}
+            size={size}
             fullWidth={fullWidth}
             onChange={onChange}
             margin={margin}
             value={value}
-            style={{ color: !value ? "#767676" : palette.label.main }}
-          >
-            <option value="" hidden>
-              {defaultValue}
-            </option>
-            {values?.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </StyledSelectField>
+            defaultValue={defaultValue}
+            values={values}
+            name={name}
+          />
         )}
       />
       <Typography variant="" colorType="error" align="right">

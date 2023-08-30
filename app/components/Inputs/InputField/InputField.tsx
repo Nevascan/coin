@@ -4,11 +4,11 @@ import { StyledInputField } from "./InputField.styles";
 import { InputProps } from "props/inputs";
 
 export const InputField: FC<InputProps> = ({
-  name = "",
   size = "large",
   type = "text",
   fullWidth = false,
   margin = false,
+  name,
   placeholder,
   value,
   onChange,
