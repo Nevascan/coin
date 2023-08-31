@@ -1,3 +1,4 @@
+import { ReactNode, CSSProperties } from "react";
 import styled from "styled-components";
 import { breakpoints } from "styles/defaultTheme";
 
@@ -15,8 +16,8 @@ export type GridItemProps = {
   md?: props;
   lg?: props;
   xl?: props;
-  children: any;
-  style?: any;
+  children: ReactNode;
+  style?: CSSProperties;
 };
 
 export const StyledGridItem = styled.div<GridItemProps>`

@@ -3,7 +3,7 @@ import { Button } from "../Button";
 import { spacing } from "styles/defaultTheme";
 
 const storyButton: Meta<typeof Button> = {
-  title: "Components/Button",
+  title: "Components/Inputs/Button",
   component: Button,
   argTypes: {
     variant: {

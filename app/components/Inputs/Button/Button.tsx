@@ -1,20 +1,7 @@
 import { FC } from "react";
-import { StyledButton } from "./Button.styles";
 
-type ButtonProps = {
-  children: string;
-  variant?: "contained" | "outline";
-  size?: "small" | "medium" | "large";
-  onClick?: any; // definir melhor o tipo
-  fullWidth?: boolean;
-  width?: number | string;
-  margin?: number | number[];
-  mb?: number;
-  mt?: number;
-  mr?: number;
-  ml?: number;
-  type?: "button" | "reset" | "submit";
-};
+import { StyledButton } from "./Button.styles";
+import { ButtonProps } from "props/inputs";
 
 export const Button: FC<ButtonProps> = ({
   variant = "contained",

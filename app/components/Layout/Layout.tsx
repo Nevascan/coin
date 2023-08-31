@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { StyledHeader, StyledFooter } from "./Layout.styles";
 import { Link } from "../Link";
 import { Routes } from "routes";
@@ -7,7 +7,7 @@ import { Typography } from "../Typography";
 
 type LayoutProps = {
   background?: string;
-  children: any;
+  children: ReactNode;
 };
 
 export const Layout: FC<LayoutProps> = ({

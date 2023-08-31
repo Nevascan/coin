@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NumericInputField } from "../NumericInputField";
+import { MaskField } from "../MaskField";
 import { spacing } from "styles/defaultTheme";
 
-const storyNumericInputField: Meta<typeof NumericInputField> = {
-  title: "Components/Inputs/NumericInputField",
-  component: NumericInputField,
+const storyMaskField: Meta<typeof MaskField> = {
+  title: "Components/Inputs/MaskField",
+  component: MaskField,
   argTypes: {
     size: {
       options: ["small", "medium", "large"],
@@ -20,18 +20,18 @@ const storyNumericInputField: Meta<typeof NumericInputField> = {
   },
 };
 
-export default storyNumericInputField;
-type Story = StoryObj<typeof NumericInputField>;
+export default storyMaskField;
+type Story = StoryObj<typeof MaskField>;
 
-export const StoryNumericField: Story = {
+export const StoryMaskField: Story = {
   render: (args) => (
     <div style={{ margin: spacing(2, 1) }}>
-      <NumericInputField {...args} />
+      <MaskField {...args} />
     </div>
   ),
   args: {
     name: "cellPhone",
-    size: "medium",
+    size: "large",
     fullWidth: false,
     placeholder: "Digite aqui",
   },

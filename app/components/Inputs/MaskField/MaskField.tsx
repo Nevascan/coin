@@ -1,32 +1,35 @@
 import { FC } from "react";
+
 import { PatternFormat } from "react-number-format";
-import { InputFieldProps } from "../InputField";
 import { StyledInputField } from "../InputField/InputField.styles";
+import { InputProps } from "props/inputs";
+
+type MaskFieldProps = InputProps;
 
 const formatTypes = {
   cellPhone: "(##) #####-####",
   date: "##/##/####",
 };
 
-export const NumericInputField: FC<InputFieldProps> = ({
-  fullWidth = false,
-  size = "medium",
-  placeholder = "",
-  margin = false,
+export const MaskField: FC<MaskFieldProps> = ({
   name = "",
+  margin = false,
+  fullWidth = false,
+  size = "large",
+  placeholder,
   onChange,
   value,
 }) => {
   return (
     <PatternFormat
+      format={formatTypes[name]}
       margin={margin}
+      fullWidth={fullWidth}
       name={name}
-      typeofSize={size}
+      sizeType={size}
       placeholder={placeholder}
       onChange={onChange}
-      fullWidth={fullWidth}
       value={value}
-      format={formatTypes[name]}
       customInput={StyledInputField}
     />
   );

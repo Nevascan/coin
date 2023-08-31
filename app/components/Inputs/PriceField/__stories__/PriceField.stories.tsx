@@ -27,7 +27,7 @@ export const StoryPriceField: Story = {
   ),
   args: {
     name: "price",
-    size: "medium",
+    size: "large",
     fullWidth: false,
     placeholder: "Digite aqui",
   },

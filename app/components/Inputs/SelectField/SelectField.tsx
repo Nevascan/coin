@@ -1,31 +1,42 @@
-import { FC } from "react";
+import { FC, useState } from "react";
+
 import { StyledSelectField } from "./SelectField.styles";
+import { SelectProps } from "props/inputs";
+import { palette } from "styles/defaultTheme";
 
-type SelectFieldProps = {
-  size?: string;
-  values: any;
-  name: string;
-  onChange: () => any;
-  fullWidth?: boolean;
-  margin?: boolean;
-};
-
-export const SelectField: FC<SelectFieldProps> = ({
-  size = "medium",
+export const SelectField: FC<SelectProps> = ({
+  size = "large",
   fullWidth = false,
   values = [],
   margin = false,
   onChange,
   name,
+  defaultValue,
+  value,
+  placeholder,
 }) => {
+  const [valueChanged, setValueChanged] = useState("");
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setValueChanged(value);
+    return onChange && onChange(value);
+  };
+
   return (
     <StyledSelectField
-      typeofSize={size}
+      sizeType={size}
       fullWidth={fullWidth}
       name={name}
-      onChange={onChange}
+      onChange={handleChange}
       margin={margin}
+      style={{ color: !valueChanged ? "#767676" : palette.label.main }}
+      value={value}
+      placeholder={placeholder}
     >
+      <option value="" hidden>
+        {defaultValue}
+      </option>
       {values?.map((item) => (
         <option key={item} value={item}>
           {item}

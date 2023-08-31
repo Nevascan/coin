@@ -1,31 +1,34 @@
 import { FC } from "react";
-import { NumericFormat } from "react-number-format";
-import { InputFieldProps } from "../InputField";
-import { StyledInputField } from "../InputField/InputField.styles";
 
-export const PriceField: FC<InputFieldProps> = ({
-  name,
-  placeholder = "",
+import { NumericFormat } from "react-number-format";
+import { StyledInputField } from "../InputField/InputField.styles";
+import { InputProps } from "props/inputs";
+
+type PriceFieldProps = InputProps;
+
+export const PriceField: FC<PriceFieldProps> = ({
   fullWidth = false,
-  size = "medium",
   margin = false,
+  size = "large",
+  name,
+  placeholder,
   onChange,
   value,
 }) => {
   return (
     <NumericFormat
       margin={margin}
-      name={name}
-      typeofSize={size}
-      value={value}
-      placeholder={placeholder}
       fullWidth={fullWidth}
+      name={name}
+      sizeType={size}
+      placeholder={placeholder}
       onChange={onChange}
-      prefix="R$"
+      value={value}
       thousandSeparator="."
       decimalSeparator=","
       fixedDecimalScale
       decimalScale={2}
+      prefix="R$"
       customInput={StyledInputField}
     />
   );

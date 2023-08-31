@@ -1,35 +1,25 @@
 import { FC } from "react";
+
 import { StyledInputField } from "./InputField.styles";
+import { InputProps } from "props/inputs";
 
-export type InputFieldProps = {
-  size?: "small" | "medium" | "large";
-  type?: "text" | "email" | "password" | "date";
-  value?: string | number;
-  name?: string;
-  onChange?: any; // definir melhor o tipo
-  placeholder: string;
-  fullWidth?: boolean;
-  margin?: boolean;
-};
-
-export const InputField: FC<InputFieldProps> = ({
+export const InputField: FC<InputProps> = ({
   size = "large",
   type = "text",
-  placeholder = "",
   fullWidth = false,
   margin = false,
+  name,
+  placeholder,
   value,
   onChange,
-  name,
 }) => {
   return (
-    // Arrumar o radio e checkbox
     <StyledInputField
       margin={margin}
       fullWidth={fullWidth}
       name={name}
       type={type}
-      typeofSize={size}
+      sizeType={size}
       placeholder={placeholder}
       onChange={onChange}
       value={value}
