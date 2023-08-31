@@ -1,4 +1,5 @@
-import { useState, FC } from "react";
+import { FC, useState } from "react";
+
 import { StyledContainer, StyledList, StyledItem } from "./AutoComplete.styles";
 import { StyledInputField } from "../InputField/InputField.styles";
 import { AutoCompleteProps } from "props/inputs";
@@ -13,7 +14,7 @@ export const AutoComplete: FC<AutoCompleteProps> = ({
   placeholder,
   onChange,
 }) => {
-  const [valueChanged, setValueChanged] = useState("");
+  const [valueChanged, setValueChanged] = useState(value);
   const [filteredValue, setFilteredValue] = useState<string[]>([]);
 
   const handleChange = (e) => {
@@ -45,7 +46,7 @@ export const AutoComplete: FC<AutoCompleteProps> = ({
         sizeType={size}
         placeholder={placeholder}
         onChange={handleChange}
-        value={valueChanged || value}
+        value={valueChanged}
       />
 
       {filteredValue.length > 0 && (

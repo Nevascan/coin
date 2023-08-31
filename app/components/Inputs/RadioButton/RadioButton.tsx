@@ -1,21 +1,16 @@
-import { Typography } from "app/components/Typography";
-import { FC, ChangeEventHandler } from "react";
-import { StyledRadioButton, StyledRadioContainer } from "./RadioButton.styles";
+import { FC } from "react";
 
-type RadioButtonProps = {
-  onChange?: ChangeEventHandler<HTMLInputElement>;
-  margin?: number | number[];
-  value?: string;
-  id: string;
-  label: string;
-  checked?: boolean;
-  name: string;
-  size?: "small" | "medium";
-};
+import { Typography } from "app/components/Typography";
+import { StyledRadioButton, StyledRadioContainer } from "./RadioButton.styles";
+import { RadioButtonProps } from "props/inputs";
 
 export const RadioButton: FC<RadioButtonProps> = ({
   size = "medium",
-  margin,
+  margin = 0,
+  mt = 0,
+  mb = 0,
+  ml = 0,
+  mr = 0,
   value,
   checked,
   label,
@@ -34,6 +29,10 @@ export const RadioButton: FC<RadioButtonProps> = ({
         checked={checked}
         sizeType={size}
         margin={margin}
+        mt={mt}
+        mb={mb}
+        mr={mr}
+        ml={ml}
       />
       <Typography
         variant="body2"

@@ -1,20 +1,7 @@
-import { FC, MouseEventHandler, ReactNode } from "react";
-import { StyledButton } from "./Button.styles";
+import { FC } from "react";
 
-type ButtonProps = {
-  children: ReactNode;
-  variant?: "contained" | "outline";
-  size?: "small" | "medium" | "large";
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  fullWidth?: boolean;
-  width?: number | string;
-  margin?: number | number[];
-  mb?: number;
-  mt?: number;
-  mr?: number;
-  ml?: number;
-  type?: "button" | "reset" | "submit";
-};
+import { StyledButton } from "./Button.styles";
+import { ButtonProps } from "props/inputs";
 
 export const Button: FC<ButtonProps> = ({
   variant = "contained",

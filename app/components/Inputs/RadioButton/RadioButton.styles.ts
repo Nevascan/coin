@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 type StyleProps = {
-  margin?: number | number[];
   sizeType: string;
+  margin?: number | number[];
+  mt?: number;
+  mb?: number;
+  mr?: number;
+  ml?: number;
 };
 
 const type = {

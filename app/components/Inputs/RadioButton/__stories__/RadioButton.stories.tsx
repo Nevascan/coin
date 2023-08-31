@@ -17,7 +17,7 @@ export default storyRadioButton;
 type Story = StoryObj<typeof RadioButton>;
 
 export const StoryRadioButton: Story = {
-  render: (args) => (
+  render: () => (
     <div style={{ display: "flex", gap: 2, margin: spacing(2, 1) }}>
       <RadioButton
         id="yes"
@@ -25,19 +25,9 @@ export const StoryRadioButton: Story = {
         label="Yes"
         value="Yes"
         checked={true}
-        size={args.size}
+        size="medium"
       />
-      <RadioButton
-        id="no"
-        name="radio"
-        label="No"
-        value="No"
-        size={args.size}
-      />
+      <RadioButton id="no" name="radio" label="No" value="No" size="medium" />
     </div>
   ),
-
-  args: {
-    size: "medium",
-  },
 };
