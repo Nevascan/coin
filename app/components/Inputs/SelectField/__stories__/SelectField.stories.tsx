@@ -38,5 +38,6 @@ export const StorySelectField: Story = {
     size: "large",
     fullWidth: false,
     values: example,
+    placeholder: "Selecione um estado",
   },
 };

@@ -41,7 +41,7 @@ export const StoryAutocomplete: Story = {
     name: "autocomplete",
     size: "large",
     fullWidth: false,
-    placeholder: "Digite aqui",
+    placeholder: "Selectione uma fruta",
     options: options,
   },
 };
